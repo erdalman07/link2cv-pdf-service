@@ -17,5 +17,5 @@ COPY package*.json ./
 RUN npm install --omit=dev
 COPY . .
 
-EXPOSE 3100
+EXPOSE ${PORT:-3100}
 CMD ["node", "server.js"]
